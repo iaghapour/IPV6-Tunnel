@@ -4,7 +4,7 @@
 
 # دستورات تانل سرور ایران
 1. Open the /etc/rc.local file:
-`nano /etc/rc.local`
+```nano /etc/rc.local```
 2. Copy and paste the following commands into the file, replacing the placeholder IPs with your external and Iranian IPs:
 `#!/bin/bash
 
