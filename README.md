@@ -3,7 +3,7 @@
 ### Learn how to set up and configure 6to4 IPv6 tunneling on Linux with this guide.
 
 # دستورات تانل سرور ایران
-1= Open the /etc/rc.local file:
+1= Open the `/etc/rc.local file:`
 
 ```
 nano /etc/rc.local
@@ -54,7 +54,7 @@ sysctl -p
 ```
 # دستورات تانل سرور خارج
 
-1.Open the /etc/rc.local file:
+1.Open the `/etc/rc.local file`:
 
 ```
 nano /etc/rc.local
@@ -104,6 +104,7 @@ sysctl -p
 ```
 
 Now both of your servers are connected, and you have a local IPv6 address:
-IP Kharej: 2001:470:1f10:e1f::2
-IP Iran: 2001:470:1f10:e1f::1
+
+IP Kharej: `2001:470:1f10:e1f::2`
+IP Iran: `2001:470:1f10:e1f::1`
 ### الان از آیپی ساخته شده برای خارج میتونید برای تانل مثل دکودمودور استفاده کنید
