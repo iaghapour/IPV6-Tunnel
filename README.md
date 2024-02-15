@@ -4,7 +4,10 @@
 
 # دستورات تانل سرور ایران
 1= Open the /etc/rc.local file:
-```nano /etc/rc.local```
+
+```
+nano /etc/rc.local
+```
 
 2= Copy and paste the following commands into the file, replacing the placeholder IPs with your external and Iranian IPs:
 
@@ -50,10 +53,17 @@ sysctl -p
 /etc/rc.local
 ```
 # دستورات تانل سرور خارج
+
 1.Open the /etc/rc.local file:
-`nano /etc/rc.local`
-2. Copy and paste the following commands into the file, replacing the placeholder IPs with your external and Iranian IPs:
-`#!/bin/bash
+
+```
+nano /etc/rc.local
+```
+
+2= Copy and paste the following commands into the file, replacing the placeholder IPs with your external and Iranian IPs:
+
+```
+#!/bin/bash
 ip tunnel add 6to4tun_KH mode sit remote ipIran local ipKharej
 ip -6 addr add 2001:470:1f10:e1f::2/64 dev 6to4tun_KH
 ip link set 6to4tun_KH mtu 1480
@@ -81,12 +91,17 @@ sysctl -p
 service iptables save
 service iptables restart
 service iptables stop
-service iptables start`
-3. After saving and exiting, run the following commands in order:
-`chmod +x /etc/rc.local
+service iptables start
+```
+
+3= After saving and exiting, run the following commands in order:
+
+```
+chmod +x /etc/rc.local
 echo "net.ipv4.ip_forward=1" > /etc/sysctl.conf 
 sysctl -p
-/etc/rc.local`
+/etc/rc.local
+```
 
 Now both of your servers are connected, and you have a local IPv6 address:
 IP Kharej: 2001:470:1f10:e1f::2
