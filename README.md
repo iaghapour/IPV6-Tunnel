@@ -3,13 +3,13 @@
 ### Learn how to set up and configure 6to4 IPv6 tunneling on Linux with this guide.
 
 # دستورات تانل سرور ایران
-1. Open the /etc/rc.local file:
-2. 
+1= Open the /etc/rc.local file:
 ```nano /etc/rc.local```
 
-4. Copy and paste the following commands into the file, replacing the placeholder IPs with your external and Iranian IPs:
+2= Copy and paste the following commands into the file, replacing the placeholder IPs with your external and Iranian IPs:
 
-```#!/bin/bash
+```
+#!/bin/bash
 
 ip tunnel add 6to4tun_IR mode sit remote ipharej local ipiran
 ip -6 addr add 2001:470:1f10:e1f::1/64 dev 6to4tun_IR
@@ -43,7 +43,8 @@ service iptables start`
 `chmod +x /etc/rc.local
 echo "net.ipv4.ip_forward=1" > /etc/sysctl.conf 
 sysctl -p
-/etc/rc.local```
+/etc/rc.local
+```
 # دستورات تانل سرور خارج
 1.Open the /etc/rc.local file:
 `nano /etc/rc.local`
