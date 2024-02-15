@@ -38,9 +38,13 @@ sysctl -p
 service iptables save
 service iptables restart
 service iptables stop
-service iptables start`
-3. After saving and exiting, run the following commands in order:
-`chmod +x /etc/rc.local
+service iptables start
+```
+
+3= After saving and exiting, run the following commands in order:
+
+```
+chmod +x /etc/rc.local
 echo "net.ipv4.ip_forward=1" > /etc/sysctl.conf 
 sysctl -p
 /etc/rc.local
